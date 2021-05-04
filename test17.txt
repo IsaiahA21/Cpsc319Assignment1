@@ -1,0 +1,5 @@
+push(7)
+push(108)
+push(200)
+push(42)
+pop()

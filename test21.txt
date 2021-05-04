@@ -1,0 +1,6 @@
+push(10000)
+top()
+push(20000)
+top()
+push(30000.0)
+top()

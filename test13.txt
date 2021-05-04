@@ -1,0 +1,8 @@
+push(9)
+push(3)
+pop()
+push(7)
+pop()
+top()
+top()
+top()

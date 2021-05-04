@@ -1,0 +1,6 @@
+push(20)
+top()
+pop()
+top()
+push(20)
+top()

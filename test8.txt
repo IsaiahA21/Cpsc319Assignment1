@@ -1,0 +1,6 @@
+push(22)
+push(21)
+push(666)
+pop()
+pop()
+top()

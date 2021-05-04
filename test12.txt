@@ -1,0 +1,6 @@
+push(1)
+push(7)
+push(7)
+top()
+top()
+top()
