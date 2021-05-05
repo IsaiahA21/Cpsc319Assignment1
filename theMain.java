@@ -50,7 +50,6 @@ public class theMain {
         int topEle = topElement();
         if (topEle < 0) {
             writeFIle("Error");
-            System.exit(1);
             return;
         }
         if (topEle == 666) {
@@ -59,11 +58,8 @@ public class theMain {
 
             writeFIle("666");
 
-            
-            if ((index) >= 0 /* && (topEle = topElement()) == 666*/) {
-                /**
-                 * after recieving grade, changed the if statement
-                 */
+            if ((index) >= 0 && (topEle = topElement()) == 666) {
+
                 shrinkStack(1);
                 System.out.println("666 twice");
 
@@ -118,12 +114,6 @@ public class theMain {
             if (topEle == 319) {
                 writeFIle("666");
             }
-        } 
-        /**
-         * addition after recieving grade
-         */
-        else {
-            writeFIle(topEle);
         }
         displayArray();
     }
@@ -139,27 +129,14 @@ public class theMain {
         copyIntoOG();
     }
 
-    public void push(int value) 
-    {
-        if (index < 0 && value != 666) {
+    public void push(int value) {
+        if (index < 0) {
             sizeArray = sizeArray + 1;
-
             theArray = new int[sizeArray];
             index++;
            // System.out.println("index is " + index);
-           if (value == 3) {
-               theArray[index] = 7;
-
-           } else {
-               theArray[index] = value;
-           }
-        } else if(index <0 && value == 666){
-            sizeArray = sizeArray + 1;
-            theArray = new int[sizeArray];
-            index++;
             theArray[index] = value;
-            growStack(2, value);
-        }else if (value == 0) {
+        } else if (value == 0) {
             System.out.println("in else if for 0");
         } else if (value == 666) {
             System.out.println("in else if for 666");
@@ -269,11 +246,11 @@ public static void main(String[] args) {
          String templine = line.toLowerCase();
 
          if(eachline[0] == ' '){
-            test.writeFIle("Input error.");
+            test.writeFIle("Input error");
              System.out.println("space in front");
          }
     else if ((matching = templine.contains("push()"))){
-            test.writeFIle("Input error.");
+            test.writeFIle("Input error");
     }
          //checks if the string contains push(
    else if ((matching = templine.contains("push("))) 
@@ -290,19 +267,15 @@ public static void main(String[] args) {
                skip = checkIfNum(eachline[p + countNum + 1]);
                 // if it not a letter then we are going to have a input error
                 if (skip == false) {
-                  test.writeFIle("Input error.");
-                  /**
-                   * after receiving grades
-                   */
-                  System.exit(1);
+                  test.writeFIle("Input error");
                   break;
                 }
               countNum++;
              }
              if (eachline[(eachline.length)-1] != ')' ){
-                test.writeFIle("Input error.");
+                test.writeFIle("Input error");
                 
-                 System.out.println("extra letter.");
+                 System.out.println("extra letter");
                  skip = false;
              }
 
@@ -330,7 +303,7 @@ public static void main(String[] args) {
        // }
              // System.out.println(sum);
              if (sum < 0) {
-                 test.writeFIle("Input error.");
+                 test.writeFIle("Input error");
                  // System.exit(1);
              } else {
                  test.push(sum);
@@ -353,7 +326,7 @@ public static void main(String[] args) {
              // System.out.println(sum);
              test.top();
          } else {
-             test.writeFIle("Input error.");
+             test.writeFIle("Input error");
              // System.exit(1);
          }
 
